@@ -30,7 +30,7 @@ function twoFind($array, $target)
     return false;
 }
 
-$array = [10, 3, 5, 19, 70, 60, 24, 90];
+$array = [10, 3, 5, 2, 1, 10, 19, 70, 60, 24, 90];
 
 //echo twoFind($array, 900);
 
@@ -68,16 +68,18 @@ print_r(maopao($array));
 
 //冒泡
 function maopao($array){
-    $max = 0;
 
-    for($i=0;$i < count($array) -1; $i++)
-        for($j=0; $j < count($array) -1 - $i; $j++){
-            if($array[$j] > $array[$max]){
-                echo $j.'-'.$max."<br/>";
-                $array = swap($array, $j, $max);
-                $max = $j;
+    for($i=1;$i < count($array); $i++){
+        for($j=0; $j < count($array) - $i; $j++){
+            if($array[$j] > $array[$j+1]){
+                $array = swap($array, $j, $j+1);
             }
         }
+
+        print_r($array);
+        echo "<br/>";
+    }
+
     return $array;
 }
 
