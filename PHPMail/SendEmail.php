@@ -44,7 +44,7 @@ class SendEmail2{
 //设置收件人邮箱地址 该方法有两个参数 第一个参数为收件人邮箱地址 第二参数为给该地址设置的昵称 不同的邮箱系统会自动进行处理变动 这里第二个参数的意义不大
         $mail->addAddress('2426883452@qq.com','张超');
 //添加多个收件人 则多次调用方法即可
-        $mail->addAddress('songshouming-rj@ofo.com','张超');
+        $mail->addAddress('','');
 //添加该邮件的主题
         $mail->Subject = 'PHPMailer发送邮件的示例';
 //添加邮件正文 上方将isHTML设置成了true，则可以是完整的html字符串 如：使用file_get_contents函数读取本地的html文件
